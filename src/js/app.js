@@ -21,7 +21,9 @@ async function getUsersData() {
 			return namesArr.sort();
 		}
 
-		sortNames().forEach((name) => {
+		const sortedNames = sortNames();
+
+		sortedNames.forEach((name) => {
 			// console.log(name);
 			const template = `<li class='users__item'>${name}</li>`;
 			document.querySelector('.users__list').insertAdjacentHTML('beforeend', template);
